@@ -1,0 +1,14 @@
+let name;
+let surename;
+let group;
+let bday;
+name = "bohdan";
+surename = "Benko";
+group = "lv";
+bday = 1982;
+let married = true;
+alert (name);
+console.log(bday,married,name,surename,group);
+let zero = null;
+let un;
+console.log(typeof zero, typeof un);
