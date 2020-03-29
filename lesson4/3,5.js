@@ -36,6 +36,16 @@ class Worker {
   worker1.showExp = 1.5;
   console.log("New experience: " + worker1.showExp);
   worker1.showSalaryWithExperience();
+
+let salaryArr = [worker1, worker2, worker3];
+    let sortSalary = salaryArr.sort(function(a,b)  {
+        return a.showSalaryWorker()- b.showSalaryWorker();
+    })
+    console.log(sortSalary);
+    for (let i = 0; i < sortSalary.length; i++) {
+        console.log(sortSalary[i].fullName + ":" + sortSalary[i].showSalaryWorker());
+        
+    }
 ///////////////5
 class GeometricFigure {
 
