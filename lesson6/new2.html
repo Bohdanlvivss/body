@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Benko	</title>
+</head>
+
+   
+	<body>  
+		<img class="image" src="dog.jpg">
+		<p>
+			<button id="button1" onclick="myFunction1()">Хочете побачит кота?</button>
+		  </p> 
+		  <dialog id="myDialog"><img id="image2"></dialog>
+		</body>
+	  <script>
+		 function myFunction1() {
+      		 let Img = document.getElementsByClassName("image")[0];
+			 Img.src = "cat.jpg";
+			 document.getElementById("image2").src = Img.src;
+			 document.getElementById("myDialog").showModal();
+		 }
+	  </script>
+
+ 	
+
+
+</html>

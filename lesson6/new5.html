@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Benko	</title>
+</head>
+
+   
+
+	<body>
+		<h1>I'am a big header!!!</h1>
+ <div id="myDiv">
+	 <p>First paragraph</p>
+	 <p>Second paragraph</p>
+	 <p>Third paragraph</p>
+	 <p>Fourth paragraph</p>
+ </div>
+ <ul id="myList">
+	 <li>Make</li>
+	 <li>me</li>
+	 <li>vertical!</li>
+ </ul>
+ <span>Make me invisible, please!</span>
+ </body>
+
+
+	  <script>
+	document.querySelector("h1").style.backgroundColor = "green";
+
+ let parags = document.getElementById("myDiv");
+	 parags.querySelectorAll('p')[0].style.fontWeight = "bold";
+	 parags.querySelectorAll('p')[1].style.color = "red";
+	 parags.querySelectorAll('p')[2].style.textDecoration = "underline";
+     parags.querySelectorAll('p')[3].style.fontStyle = "italic";
+	 document.getElementsByTagName("span")[0].style.visibility = "hidden";
+
+ 	let mylist = [];
+ let uls = document.getElementById("myList");
+ let lists = document.querySelectorAll("li");
+     for (var i = 0; i < lists.length; i++) {
+		mylist[i] = lists[i].innerHTML;
+     }
+
+     let newMylist = document.createElement("p");
+	 newMylist.innerHTML = mylist.join(" ");
+         uls.replaceWith(newMylist,uls)
+         uls.remove();
+	  </script>
+
+ 	
+
+
+</html>
+
