@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Benko	</title>
+</head>
+
+   
+<body>
+	<h2>Article header</h2>      
+      <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+      </div>
+	<p>Another text</p>
+    </body>
+	<button onclick="myFunction()">Try it</button>
+	  <script>
+		  
+
+
+  
+
+
+
+  
+  function myFunction() {
+  let x = [], y, i, text;
+  let output = "";
+  text = document.querySelectorAll("#text");
+  y = text[0].textContent.split("\n");
+
+  for (let i = 0; i<y.length; i++) {
+    if(y[i] != "" && y[i] != "      ")
+    {
+      x.push(y[i]);
+    }
+  }
+  for (i = 0; i < x.length; i++) {
+    output = output.concat("Selector text " + i + ":" + x[i] + "\n");
+  }
+  alert(output);
+}
+</script>
+
+</html>
+
