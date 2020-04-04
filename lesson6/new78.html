@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Benko	</title>
+</head>
+
+
+<body>
+  <main class="mainClass check item">  
+
+  </main> 
+</body>
+
+<script>
+  let divv = document.createElement("div");
+  divv.setAttribute('id', 'myDiv');
+  let para = document.createElement("p");
+  let node = document.createTextNode("First paragraph.");
+  divv.appendChild(para).appendChild(node);
+
+  let init = document.getElementsByClassName("mainClass check item");
+  init[0].appendChild(divv);
+</script>
+
+</html>
