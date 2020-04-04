@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Benko	</title>
+</head>
+<body>
+  <h2>List</h2>
+  <ol id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ol> 
+  <button onclick="myFunction()">Try it</button>
+
+  <dialog id="myDialog"></dialog>
+
+</body>
+
+<script>
+  
+  function myFunction() {
+    let output = "", x = [], sorted = "";
+    let text = document.querySelectorAll("#list");
+    let y = text[0].textContent.split("\n");
+
+    for (let index = 0; index < y.length; index++) {
+    if(y[index] != "" && y[index] != "  ")
+      {
+        x.push(y[index]);
+      }
+    }
+
+      sorted = sorted.concat(x[0]);
+      sorted = sorted.concat(x[x.length - 1]);
+      sorted = sorted.concat(x[1]);
+      sorted = sorted.concat(x[3]);
+      sorted = sorted.concat(x[2]);
+
+    document.getElementById("myDialog").textContent = sorted;
+    document.getElementById("myDialog").showModal();
+}
+
+</script>
