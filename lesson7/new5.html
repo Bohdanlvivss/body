@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Bohdan	</title>
+</head>
+   
+	<body>  
+ 
+  <div>
+      <button id=Button>Live buton</button>
+    </div>
+
+
+		</body>
+	  <script>
+	 
+   let button;
+  button = document.getElementById("Button");
+
+  function onButton() {
+      button.insertAdjacentHTML("afterend", "<div>Mouse on me!</div>");
+    }
+    button.addEventListener("mouseover",onButton);
+
+    function outButton(){
+      button.insertAdjacentHTML("afterend", "<div>Mouse is not on me!</div>");
+    }
+    button.addEventListener("mouseout",outButton);
+
+    function clickButton(){
+      button.insertAdjacentHTML("afterend", "<div>I was presed!</div>");
+    }
+    button.addEventListener("click",clickButton);
+
+    
+
+    
+	  </script>
+
+</html>
+

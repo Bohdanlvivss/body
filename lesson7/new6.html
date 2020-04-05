@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Bohdan	</title>
+</head>
+   
+	<body>  
+ 
+    <div>
+      <p>Width: <span id=width></span></p>
+      <p>Height: <span id=height></span></p>
+    </div>
+
+		</body>
+	  <script>
+	 
+   let screenWidth;
+    let screenHeight;
+
+    function showChangeScreen () {
+      screenWidth = document.getElementById("width");
+      screenHeight = document.getElementById("height");
+      screenWidth.innerHTML = window.innerWidth;
+      screenHeight.innerHTML = window.innerHeight;
+    }
+    window.addEventListener('resize', showChangeScreen);
+
+    
+	  </script>
+
+</html>
+

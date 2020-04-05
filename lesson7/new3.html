@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Bohdan	</title>
+</head>
+   
+	<body>  
+	  <div>
+      <button id=Button1>Click to make the page blue</button>
+      <button id=Button2>Double-click to make the page pink</button>
+      <button id=Button3>Click and hold to make the page brown</button>
+      <a id="Ruler">Hover over to make page yellow</a>
+    </div> 
+    </div> 
+		</body>
+	  <script>
+	  ////////
+     let button1;
+ 	 function buttonBlue() {
+     document.body.style.backgroundColor = "blue";
+    }
+	button1 = document.getElementById("Button1");
+	button1.addEventListener("click",buttonBlue);
+   ///////////////////////
+	let button2;
+    function buttonPink() {
+      document.body.style.backgroundColor = "pink";
+    }
+	button2 = document.getElementById("Button2");
+	button2.addEventListener("dblclick",buttonPink);
+////////////////////////////
+	let button3;
+    function buttonBrown() {
+      document.body.style.backgroundColor = "brown";
+    }
+    function buttonWhite() {
+      document.body.style.backgroundColor = "white";
+    }
+	button3 = document.getElementById("Button3");
+	button3.addEventListener("mousedown",buttonBrown);
+	button3.addEventListener("mouseup",buttonWhite);
+//////////
+	let ruller;
+    function rulerYellow() {
+      document.body.style.backgroundColor = "yellow";
+    }
+	ruller = document.getElementById("Ruler");
+	ruller.addEventListener("mouseover",rulerYellow);
+	ruller.addEventListener("mouseout",buttonWhite);
+
+
+	  </script>
+
+</html>
+

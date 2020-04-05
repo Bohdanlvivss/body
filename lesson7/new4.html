@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Bohdan	</title>
+</head>
+   
+	<body>  
+ <div>
+  <select>
+    <option name= >Peter</option>
+    <option name= >John</option>
+    <option name= >Alis</option>
+    <option name= >Alex</option>
+    <option name= >Iren</option>
+  </select>
+  <button id=DELETE>Choose and Delete</button>
+</div> 
+
+		</body>
+	  <script>
+	 
+  function choosedelete() {
+    choose = document.querySelector("select").options.selectedIndex;
+    selected = document.querySelector("select")[choose];
+    selected.remove();
+          }
+  deleted = document.getElementById("DELETE");
+  deleted.addEventListener("click",choosedelete);
+
+	  </script>
+
+</html>
+

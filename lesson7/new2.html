@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Bohdan	</title>
+</head>
+   
+	<body>  
+		  <p id ='text'>I learn Java Script</p>
+    <div>
+    	<button id="STYLE">Change style!</button>
+    </div> 
+		</body>
+	  <script>
+	  
+	  	let text;
+  		let styleButton;
+
+    function changeCSS() {
+      text = document.querySelector('p');
+      text.style.color = "orange";
+      text.style.fontSize = "20px";
+      text.style.fontFamily = "Comic Sans MS";
+    }
+	styleButton = document.getElementById("STYLE");
+	styleButton.addEventListener("click",changeCSS);
+
+	  </script>
+
+</html>
+
