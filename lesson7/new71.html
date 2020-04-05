@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>    
+  <select id="country-select" onchange="updateCitys()">
+    <option value="" disabled selected>--- Country ---</option>
+  </select> 
+
+  <select id="cities-select" onchange="showOnScreen()">
+    <option value="" disabled selected>--- City ---</option>
+  </select>
+
+  <div id = "CountryCity"> </div>
+
+</body>
+
+<script>
+
+ function createCountry(name, id) {
+  return {
+    name: name,
+    id: id,
+  };
+}
+
+
+function createCity(name, country) {
+  return {
+    name: name,
+    country: country,
+  };
+}
+
+
+function removeOptions(select) {
+  while (select.options.length > 1) {                
+    select.remove(1);
+  }
+
+  select.value = "";
+}
+
+
+function addOptions(select, options) {
+  console.log(select, options)
+  options.forEach(function(option) {
+    select.options.add(new Option(option.name, option.id));
+  });
+}
+
+let countriesSelect = document.getElementById("country-select");
+let citiesSelect = document.getElementById("cities-select");
+let countryCitySelect = document.getElementById("CountryCity");
+
+
+let countries = [
+  createCountry("USA","usa"),
+  createCountry("Germany", "germany"),
+  createCountry("Ukraine", "ukraine"),
+];
+
+let cities = [
+  createCity("New-York","usa"),
+  createCity("Dalas", "usa"),
+  createCity("Koln", "germany"),
+  createCity("Berlin", "germany"),
+  createCity("Lviv", "ukraine"),
+  createCity("Ternopil", "ukraine"),
+];
+
+function updateCitys() {
+  let selectedCountry = countriesSelect.value;
+  let options = cities.filter(function(city) {
+    return city.country === selectedCountry;
+  });
+
+  removeOptions(citiesSelect);
+  addOptions(citiesSelect, options);
+}
+
+function showOnScreen()
+{
+  let e = document.getElementById("country-select");
+  let e2 = document.getElementById("cities-select");
+  let selectedCountry = countriesSelect.value;
+  let options = cities.filter(function(city) {
+    return city.country === selectedCountry;
+  })
+
+  let country = countries[e.selectedIndex - 1].name;
+  let city = options[e2.selectedIndex - 1].name;
+
+  countryCitySelect.textContent = "Country : " + country + " City: " + city;
+}
+
+addOptions(countriesSelect, countries);
+</script>
+</html>
