@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>	Bohdan </title>
+		
+</head>
+<form>
+	<p>
+	
+	<input type="checkbox" name="1" class="CHEKBOX">a 
+   <input type="checkbox" name="2" class="CHEKBOX">b 
+   <input type="checkbox" name="3" class="CHEKBOX">c 
+   <input type="checkbox" name="4" class="CHEKBOX" >d 
+   <input type="checkbox" name="5" class="CHEKBOX">e   
+   <input type="checkbox" name="6" class="CHEKBOX">f 
+</p>
+</form>
+	<div> </div>
+<body>
+	
+ <script> 
+
+
+
+$(".CHEKBOX").on("click", function() {
+	let counter = $('input.CHEKBOX:checked').length;
+	if (counter > 3) {
+		$(this).prop('checked', false);
+	}
+});
+
+
