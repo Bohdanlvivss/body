@@ -43,7 +43,8 @@ console.log(cardValide("9999-9999-99 9-9999"));
 
 //6
 function checkEmail(text) {
-	let result =/^[w]+(([\-]?([\d\w_]+))|(([\d\w_]+)[\-]?))@([\w])+\.([\w])+/gi;
+		let result =/^[a-z0-9]+(\w+)?(-{1})?(\w+)?@[a-z]+\.[a-z]+$/gi;
+
 	let result2 = result.test(text);
 	if (result2 == true) {
 	  console.log((text) + "Email is correct!");
