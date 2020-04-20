@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Styles.css">
+        <title>Smoke timer</title>
+    </head>
+        
+<body>
+    <h1>Welcome to "Cigarettes counter"</h1>
+    <h2>Do you want to quit smoking? We will help you!</h2>
+    <label>Please enter your activity time frame and count of cigarettes:</label>
+    
+    <div><label for="appt">Start Time:</label>
+
+    <input class="timePicker" type="time" id="startTime" name="appt" value="10:00"
+       min="00:00" max="24:00" required>
+
+    <label for="appt2">End Time:</label>
+
+    <input class="timePicker" type="time" id="endTime" name="appt2" value="20:00"
+       min="00:00" max="24:00" required>
+    </div>
+    <div><label for="cigCount">Cigarettes count: </label><input class="inputField" id="cigCount" name="cigCount" type="number" required value="20" min="1" max="99"></div>
+    <div id="intValDiv"><label for="intVal">Interval (in minutes): </label><input class="inputField" id="intVal" name="intVal" type="number" required value="5" min="1" max="99"></div>
+    <p><div><a onclick="startFunc()" class="oneButton">Start Timer</a>
+    <a onclick="statisticFunc()" class="oneButton">Show Statistic</a></div></p>
+    <div><label class="textForCount">Time to next cigarette: </label><div style="display: inline;" class="countdown"></div></div>
+    
+    <p><img class="fit-picture"
+     src="stop_smoking.jpg"
+     alt="Stop Smoking"></p>
+
+     <div><p class="hide">*You can restart your progress by pressing "Ctrl + Alt + Y"</p></div>
+     <div>2020 (c) Created by <a href="https://www.facebook.com/profile.php?id=100006257076037/" target="_blank">Bohdan Benko</a></div>
+</body>
+
+<dialog id="myDialog">
+    <p>Here you can see your statistic: count</p>
+    <p>of cigarettes smoked during all time.</p>
+    <div id="statisticCigCount"></div>
+    <div id="statisticDaysCount"></div>
+    <p>
+    <button onclick="closeDialog()">Close</button>
+    </p>
+</dialog>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type = "text/javascript" src="Scripts.js"></script>
+</html>
